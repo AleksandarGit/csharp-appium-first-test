@@ -17,8 +17,9 @@ namespace AppiumCsharpFirstTest
     [TestFixture]
     public class Android
     {
-        private string projectName = "reports";
-        private string accessKey = "";
+        private string projectName = "<PROJECT_NAME>";
+        private string accessKey = "<ACCESS_KEY>";
+        private string testName = "<TEST_NAME>";
 
         protected AndroidDriver<AndroidElement> driver = null;
 
@@ -27,18 +28,14 @@ namespace AppiumCsharpFirstTest
         [SetUp()]
         public void SetupTest()
         {
-
+            dc.SetCapability("testName", testName);
             dc.SetCapability("accessKey", accessKey);
             dc.SetCapability("projectName", projectName);
-            //install the app on the device
             dc.SetCapability(MobileCapabilityType.App, "cloud:<BUNDLE_ID>");
-
             dc.SetCapability("platformName", "Android");
-            //launch the app
             dc.SetCapability(AndroidMobileCapabilityType.AppPackage, "<BUNDLE_ID>");
             dc.SetCapability(AndroidMobileCapabilityType.AppActivity, "<ACTIVITY>");
             driver = new AndroidDriver<AndroidElement>(new Uri("https://cloud.experitest.com:443/wd/hub"), dc);
-
         }
 
         [Test()]
