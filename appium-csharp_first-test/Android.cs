@@ -12,7 +12,7 @@ using OpenQA.Selenium.Appium.Enums;
 using OpenQA.Selenium.Appium.Service;
 using OpenQA.Selenium.Appium.Service.Options;
 
-namespace appium
+namespace AppiumCsharpFirstTest
 {
     [TestFixture]
     public class Android

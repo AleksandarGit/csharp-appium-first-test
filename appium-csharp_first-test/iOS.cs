@@ -8,13 +8,14 @@ using NUnit.Framework;
 using OpenQA.Selenium.Appium.Enums;
 
 
-namespace appium
+namespace AppiumCsharpFirstTest
 {
     [TestFixture]
-    public class iOS
+    public class IOS
     {
-        private string projectName = "reports";
-        private string accessKey = "";
+        private string projectName = "";
+        private string accessKey = "eyJ4cC51IjoxNjUwLCJ4cC5wIjoxNDM1LCJ4cC5tIjoiTVRRNU5UQXhOelV3T0RreE1BIiwiYWxnIjoiSFMyNTYifQ.eyJleHAiOjE4MTY0MzI4MDcsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.JBVpm1JBc8AEHSJm3nY8qv-7Orx0MfSN6D9BsxmfcSA";
+
         protected IOSDriver<IOSElement> driver = null;
 
         DesiredCapabilities dc = new DesiredCapabilities();
