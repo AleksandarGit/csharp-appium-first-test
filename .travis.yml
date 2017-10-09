@@ -1,0 +1,9 @@
+language: csharp
+solution: appium-csharp_first-test.sln
+install:
+  - nuget appium-csharp_first-test.sln
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+
+script:
+  - xbuild /p:Configuration=Release appium-csharp_first-test.sln
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./AppiumCsharpFirstTest.Tests/bin/Release/AppiumCsharpFirstTest.Tests.dll
