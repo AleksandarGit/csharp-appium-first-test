@@ -35,7 +35,7 @@ namespace AppiumCsharpFirstTest
         }
 
         [Test()]
-        public void TestUntitled()
+        public void TestAndroidApp()
         {
             driver.FindElement(By.XPath("xpath=//*[@id='usernameTextField']")).SendKeys("company");
             driver.FindElement(By.XPath("xpath=//*[@id='passwordTextField']")).SendKeys("company");
