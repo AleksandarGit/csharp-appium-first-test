@@ -1,7 +1,7 @@
 language: csharp
 solution: appium-csharp_first-test.sln
 install:
-  - nuget appium-csharp_first-test.sln
+  - nuget restore appium-csharp_first-test.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 
 script:
