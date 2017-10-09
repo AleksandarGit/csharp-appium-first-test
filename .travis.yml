@@ -5,6 +5,6 @@ install:
   - nuget install NUnit.Runners -Version 3.7.0 -OutputDirectory testrunner
 
 script:
-  - ls testrunner
+  - ls -R testrunner
   - msbuild /p:Configuration=Debug appium-csharp_first-test.sln
-  - mono ./testrunner/NUnit.Runners.3.7.0/tools/nunit-console.exe ./appium-csharp_first-test/bin/Debug/appium-csharp_first-test.dll
+  - mono testrunner/NUnit.Runners.3.7.0/tools/nunit-console.exe ./appium-csharp_first-test/bin/Debug/appium-csharp_first-test.dll
