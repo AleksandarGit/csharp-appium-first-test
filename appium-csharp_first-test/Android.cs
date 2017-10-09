@@ -1,10 +1,8 @@
 ﻿using System;
-
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Appium.Android;
-using OpenQA.Selenium.Appium.iOS;
 using NUnit;
 using NUnit.Framework;
 using System.Collections.Generic;
@@ -17,9 +15,8 @@ namespace AppiumCsharpFirstTest
     [TestFixture]
     public class Android
     {
-        private string projectName = "<PROJECT_NAME>";
-        private string accessKey = "<ACCESS_KEY>";
-        private string testName = "<TEST_NAME>";
+        private string accessKey = Environment.GetEnvironmentVariable("accessKey");
+        private string testName = "Android App Test";
 
         protected AndroidDriver<AndroidElement> driver = null;
 
@@ -30,18 +27,26 @@ namespace AppiumCsharpFirstTest
         {
             dc.SetCapability("testName", testName);
             dc.SetCapability("accessKey", accessKey);
-            dc.SetCapability("projectName", projectName);
-            dc.SetCapability(MobileCapabilityType.App, "cloud:<BUNDLE_ID>");
+            dc.SetCapability(MobileCapabilityType.App, "cloud:com.experitest.ExperiBank/.LoginActivity");
             dc.SetCapability("platformName", "Android");
-            dc.SetCapability(AndroidMobileCapabilityType.AppPackage, "<BUNDLE_ID>");
-            dc.SetCapability(AndroidMobileCapabilityType.AppActivity, "<ACTIVITY>");
+            dc.SetCapability(AndroidMobileCapabilityType.AppPackage, "com.experitest.ExperiBank");
+            dc.SetCapability(AndroidMobileCapabilityType.AppActivity, ".LoginActivity");
             driver = new AndroidDriver<AndroidElement>(new Uri("https://cloud.experitest.com:443/wd/hub"), dc);
         }
 
         [Test()]
         public void TestUntitled()
         {
-
+            driver.FindElement(By.XPath("xpath=//*[@id='usernameTextField']")).SendKeys("company");
+            driver.FindElement(By.XPath("xpath=//*[@id='passwordTextField']")).SendKeys("company");
+            driver.FindElement(By.XPath("xpath=//*[@text='loginButton']")).Click();
+            driver.FindElement(By.XPath("xpath=//*[@text='Make Payment']")).Click();
+            driver.FindElement(By.XPath("xpath=//*[@id='phoneTextField']")).SendKeys("123456");
+            driver.FindElement(By.XPath("xpath=//*[@id='nameTextField']")).SendKeys("Test");
+            driver.FindElement(By.XPath("xpath=//*[@id='amountTextField']")).SendKeys("10");
+            driver.FindElement(By.XPath("xpath=//*[@id='countryTextField']")).SendKeys("US");
+            driver.FindElement(By.XPath("xpath=//*[@text='Send Payment']")).Click();
+            driver.FindElement(By.XPath("xpath=//*[@text='Yes']")).Click();
         }
 
         [TearDown()]
