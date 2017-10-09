@@ -34,12 +34,12 @@ namespace AppiumCsharpFirstTest
             driver.FindElement(By.XPath("xpath=//*[@text='Username']")).SendKeys("company");
             driver.FindElement(By.XPath("xpath=//*[@text='Password']")).SendKeys("company");
             driver.FindElement(By.XPath("xpath=//*[@text='loginButton']")).Click();
-            driver.FindElement(By.XPath("xpath=//*[@text='Make Payment']")).Click();
+            driver.FindElement(By.XPath("xpath=//*[@text='makePaymentButton']")).Click();
             driver.FindElement(By.XPath("xpath=//*[@text='Phone']")).SendKeys("123456");
             driver.FindElement(By.XPath("xpath=//*[@text='Name']")).SendKeys("Test");
             driver.FindElement(By.XPath("xpath=//*[@text='Amount']")).SendKeys("10");
             driver.FindElement(By.XPath("xpath=//*[@text='Country']")).SendKeys("US");
-            driver.FindElement(By.XPath("xpath=//*[@text='Send Payment']")).Click();
+            driver.FindElement(By.XPath("xpath=//*[@text='sendPaymentButton']")).Click();
             driver.FindElement(By.XPath("xpath=//*[@text='Yes']")).Click();
 
         }
