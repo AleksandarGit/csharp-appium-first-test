@@ -7,4 +7,4 @@ install:
 script:
   - ls -R testrunner
   - msbuild /p:Configuration=Debug appium-csharp_first-test.sln
-  - mono ./testrunner/NUnit.Runners.3.7.0/tools/nunit3-console.exe ./appium-csharp_first-test/bin/Debug/appium-csharp_first-test.dll
+  - mono ./testrunner/NUnit.ConsoleRunner.3.7.0/tools/nunit3-console.exe ./appium-csharp_first-test/bin/Debug/appium-csharp_first-test.dll
