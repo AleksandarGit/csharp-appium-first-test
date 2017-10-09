@@ -6,4 +6,4 @@ install:
 
 script:
   - xbuild /p:Configuration=Release appium-csharp_first-test.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./AppiumCsharpFirstTest/bin/Release/AppiumCsharpFirstTest.dll
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./AppiumCsharpFirstTest/bin/Debug/appium-csharp_first-test.dll
