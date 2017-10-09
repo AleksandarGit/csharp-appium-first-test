@@ -11,7 +11,7 @@ namespace AppiumCsharpFirstTest
     [TestFixture]
     public class IOS
     {
-        private string accessKey = Environment.GetEnvironmentVariable("accessKey");
+        private string accessKey = Environment.GetEnvironmentVariable("ACCESS_KEY");
         private string testName = "iOS App Test";
         protected IOSDriver<IOSElement> driver = null;
 
@@ -29,7 +29,7 @@ namespace AppiumCsharpFirstTest
         }
 
         [Test()]
-        public void TestUntitled()
+        public void TestiOSApp()
         {
             driver.FindElement(By.XPath("xpath=//*[@text='Username']")).SendKeys("company");
             driver.FindElement(By.XPath("xpath=//*[@text='Password']")).SendKeys("company");

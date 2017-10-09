@@ -15,7 +15,7 @@ namespace AppiumCsharpFirstTest
     [TestFixture]
     public class Android
     {
-        private string accessKey = Environment.GetEnvironmentVariable("accessKey");
+        private string accessKey = Environment.GetEnvironmentVariable("ACCESS_KEY");
         private string testName = "Android App Test";
 
         protected AndroidDriver<AndroidElement> driver = null;
