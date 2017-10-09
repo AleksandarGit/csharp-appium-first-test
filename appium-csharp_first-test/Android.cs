@@ -15,8 +15,7 @@ namespace AppiumCsharpFirstTest
     [TestFixture]
     public class Android
     {
-        //private string accessKey = Environment.GetEnvironmentVariable("accessKey");
-        private string accessKey = "eyJ4cC51IjoxNjUwLCJ4cC5wIjoxNDM1LCJ4cC5tIjoiTVRRNU5UQXhOelV3T0RreE1BIiwiYWxnIjoiSFMyNTYifQ.eyJleHAiOjE4MTY0MzI4MDcsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.JBVpm1JBc8AEHSJm3nY8qv-7Orx0MfSN6D9BsxmfcSA";
+        private string accessKey = Environment.GetEnvironmentVariable("accessKey");
         private string testName = "Android App Test";
 
         protected AndroidDriver<AndroidElement> driver = null;
@@ -40,7 +39,7 @@ namespace AppiumCsharpFirstTest
         {
             driver.FindElement(By.XPath("xpath=//*[@id='usernameTextField']")).SendKeys("company");
             driver.FindElement(By.XPath("xpath=//*[@id='passwordTextField']")).SendKeys("company");
-            driver.FindElement(By.XPath("xpath=//*[@text='loginButton']")).Click();
+            driver.FindElement(By.XPath("xpath=//*[@id='loginButton']")).Click();
             driver.FindElement(By.XPath("xpath=//*[@text='Make Payment']")).Click();
             driver.FindElement(By.XPath("xpath=//*[@id='phoneTextField']")).SendKeys("123456");
             driver.FindElement(By.XPath("xpath=//*[@id='nameTextField']")).SendKeys("Test");
