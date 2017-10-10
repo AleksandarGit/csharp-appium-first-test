@@ -46,7 +46,7 @@ namespace AppiumCsharpFirstTest
             driver.FindElement(By.XPath("xpath=//*[@id='amountTextField']")).SendKeys("10");
             driver.FindElement(By.XPath("xpath=//*[@id='countryTextField']")).SendKeys("US");
             driver.FindElement(By.XPath("xpath=//*[@id='sendPaymentButton']")).Click();
-            driver.FindElement(By.XPath("xpath=//*[@text='Yes']")).Click();
+            driver.FindElement(By.XPath("xpath=//*[@id='button1']")).Click();
         }
 
         [TearDown()]
