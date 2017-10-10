@@ -11,7 +11,7 @@ namespace AppiumCsharpFirstTest
     [TestFixture]
     public class IOS
     {
-        private string accessKey = Environment.GetEnvironmentVariable("ACCESS_KEY");
+        private string accessKey = Environment.GetEnvironmentVariable("SEETEST_IO_ACCESS_KEY");
         private string testName = "iOS App Test";
         protected IOSDriver<IOSElement> driver = null;
 
