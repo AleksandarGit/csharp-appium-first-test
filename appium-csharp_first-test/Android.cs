@@ -27,7 +27,7 @@ namespace AppiumCsharpFirstTest
         {
             dc.SetCapability("testName", testName);
             dc.SetCapability("accessKey", accessKey);
-            dc.SetCapability(MobileCapabilityType.App, "cloud:com.experitest.ExperiBank/.LoginActivity");
+            dc.SetCapability(MobileCapabilityType.App, "http://d242m5chux1g9j.cloudfront.net/eribank.apk");
             dc.SetCapability("platformName", "Android");
             dc.SetCapability(AndroidMobileCapabilityType.AppPackage, "com.experitest.ExperiBank");
             dc.SetCapability(AndroidMobileCapabilityType.AppActivity, ".LoginActivity");
