@@ -67,11 +67,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="iOS.cs" />
-    <Compile Include="Android.cs" />
+    <Compile Include="AndroidWebTest.cs" />
+    <Compile Include="iOSWebTest.cs" />
+    <Compile Include="iOSAppTest.cs" />
+    <Compile Include="AndroidAppTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".circleci\config.yml" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
