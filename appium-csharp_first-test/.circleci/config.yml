@@ -1,0 +1,19 @@
+﻿#
+# Build configuration for Circle CI
+#
+
+dependencies:
+  override:
+    - sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+    - echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /etc/apt/sources.list.d/mono-xamarin.list
+    - sudo apt-get update
+    - sudo apt-get install mono-complete
+    - wget https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
+    - mono nuget.exe restore appium-csharp_first-test.sln
+	- mono nuget.exe install NUnit.Runners -Version 3.7.0 -OutputDirectory testrunner
+    - xbuild /p:Configuration=Debug appium-csharp_first-test.sln
+
+test:
+  override:
+    - mono ./testrunner/NUnit.ConsoleRunner.3.7.0/tools/nunit3-console.exe ./appium-csharp_first-test/bin/Debug/appium-csharp_first-test.dll
+    
