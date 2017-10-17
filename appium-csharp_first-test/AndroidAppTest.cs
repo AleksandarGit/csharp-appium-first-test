@@ -13,7 +13,7 @@ using OpenQA.Selenium.Appium.Service.Options;
 namespace AppiumCsharpFirstTest
 {
     [TestFixture]
-    public class Android
+    public class AndroidAppTest
     {
         private string accessKey = Environment.GetEnvironmentVariable("SEETEST_IO_ACCESS_KEY");
         private string testName = "Android App Test";
