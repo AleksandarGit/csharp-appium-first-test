@@ -23,7 +23,7 @@ namespace AppiumCsharpFirstTest
             dc.SetCapability("testName", testName);
             dc.SetCapability("accessKey", accessKey);
             dc.SetCapability(MobileCapabilityType.PlatformName, "iOS");
-            dc.SetCapability(MobileCapabilityType.App, "http://d242m5chux1g9j.cloudfront.net/eribank.ipa");
+            dc.SetCapability(MobileCapabilityType.App, "http://d242m5chux1g9j.cloudfront.net/EriBank.ipa");
             dc.SetCapability(IOSMobileCapabilityType.BundleId, "com.experitest.ExperiBank");
             driver = new IOSDriver<IOSElement>(new Uri("https://cloud.experitest.com:443/wd/hub"), dc);           
         }
