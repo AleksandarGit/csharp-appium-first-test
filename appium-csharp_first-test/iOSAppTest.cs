@@ -14,7 +14,7 @@ namespace AppiumCsharpFirstTest
         // you have configured an access key as environment variable,
         // use the line below. Otherwise, specify the key directly.
         private string accessKey = Environment.GetEnvironmentVariable("SEETEST_IO_ACCESS_KEY");
-        private string testName = "iOS App Test";
+        private string testName = "iOS App Test with C#";
         protected IOSDriver<IOSElement> driver = null;
 
         DesiredCapabilities dc = new DesiredCapabilities();
