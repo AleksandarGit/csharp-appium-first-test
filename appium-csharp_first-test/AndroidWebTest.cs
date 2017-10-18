@@ -29,8 +29,8 @@ namespace AppiumCsharpFirstTest
         {
             dc.SetCapability("testName", testName);
             dc.SetCapability("accessKey", accessKey);
-            dc.SetCapability(MobileCapabilityType.PlatformName, "chrome");
-            dc.SetCapability("platformName", "Android");
+            dc.SetCapability(MobileCapabilityType.BrowserName, "chrome");
+            dc.SetCapability(MobileCapabilityType.PlatformName, "Android");
             
             driver = new AndroidDriver<AndroidElement>(new Uri("https://cloud.experitest.com:443/wd/hub"), dc);
         }
