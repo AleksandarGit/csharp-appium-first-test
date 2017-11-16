@@ -1,10 +1,12 @@
 language: csharp
 solution: appium-csharp_first-test.sln
 install:
-  - nuget restore appium-csharp_first-test.sln
-  - nuget install NUnit.Runners -Version 3.7.0 -OutputDirectory testrunner
-
+- nuget restore appium-csharp_first-test.sln
+- nuget install NUnit.Runners -Version 3.7.0 -OutputDirectory testrunner
 script:
-  - ls -R testrunner
-  - msbuild /p:Configuration=Debug appium-csharp_first-test.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.3.7.0/tools/nunit3-console.exe ./appium-csharp_first-test/bin/Debug/appium-csharp_first-test.dll
+- ls -R testrunner
+- msbuild /p:Configuration=Debug appium-csharp_first-test.sln
+- mono ./testrunner/NUnit.ConsoleRunner.3.7.0/tools/nunit3-console.exe ./appium-csharp_first-test/bin/Debug/appium-csharp_first-test.dll
+notifications:
+  slack:
+    secure: IofVowWmGdtzFI3hGGwCRG+luqWOpiD4L055QsxK8XUTsSm5KMHx9NJkefPMWo4vk8n4sEdUyt+1lZf96uHFlfjDc3RMH+PGXdVx3exrpvXOaBGnMb+8coLUoNl4D/2Q8X3Gg9Mh716JYRx+ynhhdzEji9CK1aBYE3aHqiyRw2D58/sND4ODJ+qv5482vmSv2girbc8dpyhhdtz6W4ugp0Prq+3a/qVEQaig5UhsqhDBLnYJoEX2zDu3Q+uj73YIlgu7SvSqI0owgixyFPkxBoAUQmre7cyNLId4vZJcoHSa7Q4dfCEq8+CsJind6ZRpH1P6ouUlsyQ4obKxkFkhg3ttxb2MrclUtVpkWeyz+zqHXcujUJS+IiULUT9Qlc6V8ELmUYy2J/fSCzAuHi64jKd63IbFqUECTdiUv9IFHaexy1VrBaGdliOI4H6Y2J/C2LIzsMLRVVLxQNZF45v8aWHGjl2dtxM52ORqpklCCemOT6H1WtPZ1h5S2d+M38UZyWhOjYZ4OLp8UyYwfuo+aj+8tkiP/xEtqIe5OVqijbDCRmQZhYYIP0I6A8h9QAqH/WzqWnOJcnyEN18tiA6lwmghAuswkbQ9tqhtCu1X5yjWRT5Loj43FY5cgsZyTCovPr7gG5ehqKWhP1jIV6RoXxPQ7nScgAdew3/Y1nGoGnM=
