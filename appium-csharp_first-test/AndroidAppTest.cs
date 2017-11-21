@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
@@ -56,7 +56,7 @@ namespace AppiumCsharpFirstTest
         {
             if (driver != null)
             {
-                driver.Capabilities.GetCapability("reporterUrl");
+                driver.Capabilities.GetCapability("reportUrl");
                 driver.Lock();
                 driver.Quit();
             }

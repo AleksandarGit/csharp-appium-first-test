@@ -48,7 +48,7 @@ namespace AppiumCsharpFirstTest
         {   
             if(driver != null)
             {
-                driver.Capabilities.GetCapability("reporterUrl");
+                driver.Capabilities.GetCapability("reportUrl");
                 driver.Lock();
                 driver.Quit();
             }
