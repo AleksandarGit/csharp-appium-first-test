@@ -54,8 +54,12 @@ namespace AppiumCsharpFirstTest
         [TearDown()]
         public void TearDown()
         {
-            driver.Lock();
-            driver.Quit();
+            if (driver != null)
+            {
+                driver.Capabilities.GetCapability("reporterUrl");
+                driver.Lock();
+                driver.Quit();
+            }
         }
     }
 }

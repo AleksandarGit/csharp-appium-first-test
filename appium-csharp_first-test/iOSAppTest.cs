@@ -49,7 +49,11 @@ namespace AppiumCsharpFirstTest
         [TearDown()]
         public void TearDown()
         {
-            driver.Quit();
+            if (driver != null)
+            {
+                driver.Capabilities.GetCapability("reporterUrl");
+                driver.Quit();
+            }
         }
     }
 }
