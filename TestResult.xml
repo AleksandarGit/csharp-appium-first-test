@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="2" testcasecount="4" result="Failed" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0" engine-version="3.7.0.0" clr-version="4.0.30319.42000" start-time="2017-10-18 13:27:20Z" end-time="2017-10-18 13:27:24Z" duration="3.614129">
+  <command-line><![CDATA[nunit3-console.exe  ./appium-csharp_first-test/bin/Debug/appium-csharp_first-test.dll]]></command-line>
+  <test-suite type="Assembly" id="0-1008" name="appium-csharp_first-test.dll" fullname="C:\Users\nivi.mor\Documents\Visual Studio 2017\Projects\appium-csharp_first-test\appium-csharp_first-test\bin\Debug\appium-csharp_first-test.dll" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2017-10-18 13:27:22Z" end-time="2017-10-18 13:27:24Z" duration="1.942884" total="4" passed="0" failed="4" warnings="0" inconclusive="0" skipped="0" asserts="0">
+    <environment framework-version="3.8.1.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.15063.0" platform="Win32NT" cwd="C:\Users\nivi.mor\Documents\Visual Studio 2017\Projects\appium-csharp_first-test" machine-name="NIVIMOR-LT" user="nivi.mor" user-domain="experitest" culture="en-US" uiculture="en-US" os-architecture="x64" />
+    <settings>
+      <setting name="DisposeRunners" value="True" />
+      <setting name="WorkDirectory" value="C:\Users\nivi.mor\Documents\Visual Studio 2017\Projects\appium-csharp_first-test" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.5.2" />
+      <setting name="ImageRequiresX86" value="False" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="NumberOfTestWorkers" value="4" />
+    </settings>
+    <properties>
+      <property name="ParallelScope" value="Fixtures" />
+      <property name="_PID" value="11160" />
+      <property name="_APPDOMAIN" value="domain-" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="TestSuite" id="0-1009" name="AppiumCsharpFirstTest" fullname="AppiumCsharpFirstTest" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2017-10-18 13:27:22Z" end-time="2017-10-18 13:27:24Z" duration="1.909583" total="4" passed="0" failed="4" warnings="0" inconclusive="0" skipped="0" asserts="0">
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestFixture" id="0-1006" name="AndroidAppTest" fullname="AppiumCsharpFirstTest.AndroidAppTest" classname="AppiumCsharpFirstTest.AndroidAppTest" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2017-10-18 13:27:22Z" end-time="2017-10-18 13:27:24Z" duration="1.905286" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="0-1007" name="TestAndroidApp" fullname="AppiumCsharpFirstTest.AndroidAppTest.TestAndroidApp" methodname="TestAndroidApp" classname="AppiumCsharpFirstTest.AndroidAppTest" runstate="Runnable" seed="667168066" result="Failed" label="Error" start-time="2017-10-18 13:27:22Z" end-time="2017-10-18 13:27:24Z" duration="1.844683" asserts="0">
+          <failure>
+            <message><![CDATA[System.InvalidOperationException : Could not find such user in the system (InsecureCertificate)
+TearDown : System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
+            <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.StartSession(ICapabilities desiredCapabilities)
+   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)
+   at OpenQA.Selenium.Appium.AppiumDriver`1..ctor(Uri remoteAddress, ICapabilities desiredCapabilities)
+   at AppiumCsharpFirstTest.AndroidAppTest.SetupTest() in C:\Users\nivi.mor\documents\visual studio 2017\Projects\appium-csharp_first-test\appium-csharp_first-test\AndroidAppTest.cs:line 36
+--TearDown
+   at AppiumCsharpFirstTest.AndroidAppTest.TearDown() in C:\Users\nivi.mor\documents\visual studio 2017\Projects\appium-csharp_first-test\appium-csharp_first-test\AndroidAppTest.cs:line 57]]></stack-trace>
+          </failure>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="0-1002" name="IOSWebTest" fullname="AppiumCsharpFirstTest.IOSWebTest" classname="AppiumCsharpFirstTest.IOSWebTest" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2017-10-18 13:27:22Z" end-time="2017-10-18 13:27:24Z" duration="1.904116" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="0-1003" name="TestiOSApp" fullname="AppiumCsharpFirstTest.IOSWebTest.TestiOSApp" methodname="TestiOSApp" classname="AppiumCsharpFirstTest.IOSWebTest" runstate="Runnable" seed="1695630841" result="Failed" label="Error" start-time="2017-10-18 13:27:22Z" end-time="2017-10-18 13:27:24Z" duration="1.844618" asserts="0">
+          <failure>
+            <message><![CDATA[System.InvalidOperationException : Could not find such user in the system (InsecureCertificate)
+TearDown : System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
+            <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.StartSession(ICapabilities desiredCapabilities)
+   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)
+   at OpenQA.Selenium.Appium.AppiumDriver`1..ctor(Uri remoteAddress, ICapabilities desiredCapabilities)
+   at AppiumCsharpFirstTest.IOSWebTest.SetupTest() in C:\Users\nivi.mor\documents\visual studio 2017\Projects\appium-csharp_first-test\appium-csharp_first-test\iOSWebTest.cs:line 29
+--TearDown
+   at AppiumCsharpFirstTest.IOSWebTest.TearDown() in C:\Users\nivi.mor\documents\visual studio 2017\Projects\appium-csharp_first-test\appium-csharp_first-test\iOSWebTest.cs:line 44]]></stack-trace>
+          </failure>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="0-1000" name="AndroidWebTest" fullname="AppiumCsharpFirstTest.AndroidWebTest" classname="AppiumCsharpFirstTest.AndroidWebTest" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2017-10-18 13:27:22Z" end-time="2017-10-18 13:27:24Z" duration="1.905126" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="0-1001" name="TestAndroidApp" fullname="AppiumCsharpFirstTest.AndroidWebTest.TestAndroidApp" methodname="TestAndroidApp" classname="AppiumCsharpFirstTest.AndroidWebTest" runstate="Runnable" seed="1047304312" result="Failed" label="Error" start-time="2017-10-18 13:27:22Z" end-time="2017-10-18 13:27:24Z" duration="1.844654" asserts="0">
+          <failure>
+            <message><![CDATA[System.InvalidOperationException : Could not find such user in the system (InsecureCertificate)
+TearDown : System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
+            <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.StartSession(ICapabilities desiredCapabilities)
+   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)
+   at OpenQA.Selenium.Appium.AppiumDriver`1..ctor(Uri remoteAddress, ICapabilities desiredCapabilities)
+   at AppiumCsharpFirstTest.AndroidWebTest.SetupTest() in C:\Users\nivi.mor\documents\visual studio 2017\Projects\appium-csharp_first-test\appium-csharp_first-test\AndroidWebTest.cs:line 35
+--TearDown
+   at AppiumCsharpFirstTest.AndroidWebTest.TearDown() in C:\Users\nivi.mor\documents\visual studio 2017\Projects\appium-csharp_first-test\appium-csharp_first-test\AndroidWebTest.cs:line 49]]></stack-trace>
+          </failure>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="0-1004" name="IOSAppTest" fullname="AppiumCsharpFirstTest.IOSAppTest" classname="AppiumCsharpFirstTest.IOSAppTest" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2017-10-18 13:27:22Z" end-time="2017-10-18 13:27:24Z" duration="1.905038" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="0-1005" name="TestiOSApp" fullname="AppiumCsharpFirstTest.IOSAppTest.TestiOSApp" methodname="TestiOSApp" classname="AppiumCsharpFirstTest.IOSAppTest" runstate="Runnable" seed="1440148401" result="Failed" label="Error" start-time="2017-10-18 13:27:22Z" end-time="2017-10-18 13:27:24Z" duration="1.844165" asserts="0">
+          <failure>
+            <message><![CDATA[System.InvalidOperationException : Could not find such user in the system (InsecureCertificate)
+TearDown : System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
+            <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.StartSession(ICapabilities desiredCapabilities)
+   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)
+   at OpenQA.Selenium.Appium.AppiumDriver`1..ctor(Uri remoteAddress, ICapabilities desiredCapabilities)
+   at AppiumCsharpFirstTest.IOSAppTest.SetupTest() in C:\Users\nivi.mor\documents\visual studio 2017\Projects\appium-csharp_first-test\appium-csharp_first-test\iOSAppTest.cs:line 30
+--TearDown
+   at AppiumCsharpFirstTest.IOSAppTest.TearDown() in C:\Users\nivi.mor\documents\visual studio 2017\Projects\appium-csharp_first-test\appium-csharp_first-test\iOSAppTest.cs:line 52]]></stack-trace>
+          </failure>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
