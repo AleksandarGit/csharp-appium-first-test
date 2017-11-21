@@ -33,23 +33,8 @@ namespace AppiumCsharpFirstTest
         public void TestiOSApp()
         {
             driver.Navigate().GoToUrl("https://google.com");
-            if (!(driver.FindElements(By.XPath("//*[@id='lst-ib']")).Count != 0))
-            {
-                driver.FindElement(By.XPath("//*[@id='lst-ib']")).SendKeys("mobile automation testing");
-            }
-            else
-            {
-                driver.FindElement(By.XPath("//*[@name='q']")).SendKeys("mobile automation testing");
-            }
-            if (!(driver.FindElements(By.XPath("//*[@name='btnG']")).Count != 0))
-            {
-                driver.FindElement(By.XPath("//*[@name='btnG']")).Click();
-            }
-            else
-            {
-                driver.FindElement(By.XPath("//*[@id='tsbb']")).Click();
-            }
-
+            driver.FindElement(By.XPath("//*[@name='q']")).SendKeys("mobile automation testing");
+            driver.FindElement(By.XPath("//*[@name='btnG']")).Click();
         }
 
         [TearDown()]
