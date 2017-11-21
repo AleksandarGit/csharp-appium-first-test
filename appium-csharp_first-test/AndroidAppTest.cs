@@ -33,7 +33,7 @@ namespace AppiumCsharpFirstTest
             dc.SetCapability("platformName", "Android");
             dc.SetCapability(AndroidMobileCapabilityType.AppPackage, "com.experitest.ExperiBank");
             dc.SetCapability(AndroidMobileCapabilityType.AppActivity, ".LoginActivity");
-            driver = new AndroidDriver<AndroidElement>(new Uri("https://cloud.experitest.com:443/wd/hub"), dc);
+            driver = new AndroidDriver<AndroidElement>(new Uri("https://stage.experitest.com:443/wd/hub"), dc);
         }
 
         [Test()]
@@ -54,8 +54,12 @@ namespace AppiumCsharpFirstTest
         [TearDown()]
         public void TearDown()
         {
-            driver.Lock();
-            driver.Quit();
+            if (driver != null)
+            {
+                driver.Capabilities.GetCapability("reporterUrl");
+                driver.Lock();
+                driver.Quit();
+            }
         }
     }
 }

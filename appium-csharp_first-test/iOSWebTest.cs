@@ -26,7 +26,7 @@ namespace AppiumCsharpFirstTest
             dc.SetCapability("accessKey", accessKey);
             dc.SetCapability(MobileCapabilityType.PlatformName, "iOS");
             dc.SetCapability(MobileCapabilityType.BrowserName, "safari");
-            driver = new IOSDriver<IOSElement>(new Uri("https://cloud.experitest.com:443/wd/hub"), dc);           
+            driver = new IOSDriver<IOSElement>(new Uri("https://stage.experitest.com:443/wd/hub"), dc);           
         }
 
         [Test()]
@@ -40,7 +40,11 @@ namespace AppiumCsharpFirstTest
         [TearDown()]
         public void TearDown()
         {
-            driver.Quit();
+            if (driver != null)
+            {
+                driver.Capabilities.GetCapability("reporterUrl");
+                driver.Quit();
+            }
         }
     }
 }
