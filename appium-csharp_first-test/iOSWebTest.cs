@@ -42,9 +42,7 @@ namespace AppiumCsharpFirstTest
         {
             if (driver != null)
             {
-                Console.WriteLine(driver.Capabilities.GetCapability("reportUrl"));
-                driver.Lock();
-                driver.Quit();
+                Console.WriteLine(driver.Capabilities.GetCapability("reportUrl"));                driver.Quit();
             }
         }
     }
