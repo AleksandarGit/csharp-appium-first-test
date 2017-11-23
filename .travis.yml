@@ -7,7 +7,7 @@ script:
 - ls -R testrunner
 - msbuild /p:Configuration=Debug appium-csharp_first-test.sln
 - mono ./testrunner/NUnit.ConsoleRunner.3.7.0/tools/nunit3-console.exe ./appium-csharp_first-test/bin/Debug/appium-csharp_first-test.dll
-- ls -LR
+- cat TestResult.xml
 notifications:
   slack:
     secure: 0CRc+9R7iCOL0W0vtqddSGreupMNRmgKOL72/Ltub+J1gO3/u9rr/Sx3ZaUFQTOCvEvIj0wITxiNv2C9zJte/gVWdBsuLqT+7/KGgUiuao7h6zYWfKzJjGGobAZcZ77DZL7Ehz7BnwbCzR7L6zRpzMC5zvhHSIEG4j/MM5iY8SksP4NrkzDxo6w1P1z7EJcB6nQamzEnJ2agPCTnyPNcvxDQmm00i1/rOiIGEqnpiXygrTGi0xfk5NsbjBsikF32tMOh1SmA2fJfDS+eqwTvlr1eleFVNE/rzc5xE9mCJuV6XXII0F6wX6gEORsohnxDP28NkmNpKUjFDeTjFq1x3o1JsKa8rk1svEKl4KF/t/iWGM6uGYcsKmdE/oy2n74MeYiMjsjPZPFwEajLccvW5ijsuWSwOcrZoIfnv/kPMjDrf8qtpJLwKYarAuBwuKCA0pZ1gpl8sr2pK6RFq70sESSYHxAuMcpIMyxCXaH+Gq44FsvjQAp2j2XGj3iCTW6MiPihhQtAkp4j7OQO7LEPvl8WuLQTjG8Kb4vufaeusqIANOb8ibopGgHkuIibBzHx5bmFn1ef0NPd1OCawcm9lOiOEQAC6fpB5dkQ0wnRjgYcnxpTW/354ezDnvs00ASSXW2j0ez5qyiVv8Sz5qP9USNSnT398CaNAP/2B50PDRk=
