@@ -26,7 +26,8 @@ namespace AppiumCsharpFirstTest
             dc.SetCapability("accessKey", accessKey);
             dc.SetCapability(MobileCapabilityType.PlatformName, "iOS");
             dc.SetCapability(MobileCapabilityType.BrowserName, "safari");
-            driver = new IOSDriver<IOSElement>(new Uri("https://stage.experitest.com:443/wd/hub"), dc);           
+
+            driver = new IOSDriver<IOSElement>(new Uri("https://beta.seetest.io:443/wd/hub"), dc);           
         }
 
         [Test()]
@@ -35,6 +36,7 @@ namespace AppiumCsharpFirstTest
             driver.Navigate().GoToUrl("https://google.com");
             driver.FindElement(By.XPath("//*[@name='q']")).SendKeys("mobile automation testing");
             driver.FindElement(By.XPath("//*[@name='btnG']")).Click();
+            driver.Context = "NATIVE_APP";
         }
 
         [TearDown()]

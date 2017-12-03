@@ -29,10 +29,11 @@ namespace AppiumCsharpFirstTest
         {
             dc.SetCapability("testName", testName);
             dc.SetCapability("accessKey", accessKey);
-            dc.SetCapability(MobileCapabilityType.BrowserName, "chrome");
+            dc.SetCapability(MobileCapabilityType.BrowserName, MobileBrowserType.Chrome);
+            
             dc.SetCapability(MobileCapabilityType.PlatformName, "Android");
             
-            driver = new AndroidDriver<AndroidElement>(new Uri("https://stage.experitest.com:443/wd/hub"), dc);
+            driver = new AndroidDriver<AndroidElement>(new Uri("https://beta.seetest.io:443/wd/hub"), dc);
         }
 
         [Test()]
@@ -41,6 +42,7 @@ namespace AppiumCsharpFirstTest
             driver.Navigate().GoToUrl("https://google.com");
             driver.FindElement(By.XPath("//*[@name='q']")).SendKeys("mobile automation testing");
             driver.FindElement(By.XPath("//*[@name='btnG']")).Click();
+            
         }
 
         [TearDown()]
