@@ -40,7 +40,7 @@ namespace AppiumCsharpFirstTest
         public void TestAndroidApp()
         {
             driver.Navigate().GoToUrl("https://amazon.com");
-            if (driver.Capabilities.GetCapability("reportUrl").Equals("TABLET"))
+            if (driver.Capabilities.GetCapability("device.category").Equals("TABLET"))
             {
                 driver.FindElement(By.XPath("//*[@name='field-keywords']")).SendKeys("iPhone");
                 driver.FindElement(By.XPath("//*[@text='Go']")).Click();
