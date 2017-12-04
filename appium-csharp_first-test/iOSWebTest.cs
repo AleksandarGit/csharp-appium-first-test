@@ -33,10 +33,10 @@ namespace AppiumCsharpFirstTest
         [Test()]
         public void TestiOSApp()
         {
-            driver.Navigate().GoToUrl("https://google.com");
-            driver.FindElement(By.XPath("//*[@name='q']")).SendKeys("mobile automation testing");
-            driver.FindElement(By.XPath("//*[@name='btnG']")).Click();
-            driver.Context = "NATIVE_APP";
+            driver.Navigate().GoToUrl("https://amazon.com");
+            driver.FindElement(By.XPath("//*[@name='k']")).SendKeys("mobile automation testing");
+            driver.FindElement(By.XPath("//*[@value='Go']")).Click();
+            Console.WriteLine(driver.PageSource);
         }
 
         [TearDown()]
