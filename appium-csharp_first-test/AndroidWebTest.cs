@@ -42,7 +42,6 @@ namespace AppiumCsharpFirstTest
             driver.Navigate().GoToUrl("https://amazon.com");
             driver.FindElement(By.XPath("//*[@name='k']")).SendKeys("iPhone");
             driver.FindElement(By.XPath("//*[@value='Go']")).Click();
-            Console.WriteLine(driver.PageSource);
         }
 
         [TearDown()]
