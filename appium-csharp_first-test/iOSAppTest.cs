@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
