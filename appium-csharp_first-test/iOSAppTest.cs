@@ -26,6 +26,7 @@ namespace AppiumCsharpFirstTest
             dc.SetCapability("accessKey", accessKey);
             dc.SetCapability("waitForDeviceTimeout", 120000);
             dc.SetCapability(MobileCapabilityType.PlatformName, "iOS");
+            dc.SetCapability("autoDismissAlerts", true);
             dc.SetCapability(MobileCapabilityType.App, "http://d242m5chux1g9j.cloudfront.net/EriBank.ipa");
             dc.SetCapability(IOSMobileCapabilityType.BundleId, "com.experitest.ExperiBank");
             driver = new IOSDriver<IOSElement>(new Uri("https://beta.seetest.io:443/wd/hub"), dc);           

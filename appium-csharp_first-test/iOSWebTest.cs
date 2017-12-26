@@ -24,6 +24,7 @@ namespace AppiumCsharpFirstTest
         {
             dc.SetCapability("testName", testName);
             dc.SetCapability("accessKey", accessKey);
+            dc.SetCapability("autoDismissAlerts", true);
             dc.SetCapability(MobileCapabilityType.PlatformName, "iOS");
             dc.SetCapability(MobileCapabilityType.BrowserName, "safari");
 
