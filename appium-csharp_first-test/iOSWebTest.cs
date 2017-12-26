@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
@@ -25,6 +25,7 @@ namespace AppiumCsharpFirstTest
             dc.SetCapability("testName", testName);
             dc.SetCapability("accessKey", accessKey);
             dc.SetCapability(MobileCapabilityType.PlatformName, "iOS");
+            dc.SetCapability("autoDismissAlerts", true);
             dc.SetCapability(MobileCapabilityType.BrowserName, "safari");
             driver = new IOSDriver<IOSElement>(new Uri("https://beta.seetest.io:443/wd/hub"), dc);           
         }

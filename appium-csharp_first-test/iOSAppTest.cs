@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
@@ -25,6 +25,7 @@ namespace AppiumCsharpFirstTest
             dc.SetCapability("testName", testName);
             dc.SetCapability("accessKey", accessKey);
             dc.SetCapability("waitForDeviceTimeout", 120000);
+            dc.SetCapability("autoDismissAlerts", true);
             dc.SetCapability(MobileCapabilityType.PlatformName, "iOS");
             dc.SetCapability(MobileCapabilityType.App, "http://d242m5chux1g9j.cloudfront.net/EriBank.ipa");
             dc.SetCapability(IOSMobileCapabilityType.BundleId, "com.experitest.ExperiBank");
