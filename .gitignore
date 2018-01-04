@@ -1,0 +1,10 @@
+/packages
+/appium-csharp_first-test/bin
+/appium-csharp_first-test/bin/Debug
+/appium-csharp_first-test/bin/Debug/Release
+/appium-csharp_first-test/obj/Debug
+/appium-csharp_first-test/obj/Debug/TempPE
+/TestResults
+/.vs
+
+

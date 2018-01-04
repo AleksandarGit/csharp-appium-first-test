@@ -13,7 +13,8 @@ namespace AppiumCsharpFirstTest
     {
         // you have configured an access key as environment variable,
         // use the line below. Otherwise, specify the key directly.
-        private string accessKey = Environment.GetEnvironmentVariable("SEETEST_IO_ACCESS_KEY");
+        //private string accessKey = Environment.GetEnvironmentVariable("SEETEST_IO_ACCESS_KEY");
+        private string accessKey = "eyJ4cC51IjozMDAsInhwLnAiOjI5MywieHAubSI6Ik1UVXhNakk1TURjeE5URTVNUSIsImFsZyI6IkhTMjU2In0.eyJleHAiOjE4Mjc2NTA3MTUsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.nRS6DSRnc5La0suS0nyq5q9tBLezUOMkbaTneVf30wA";
         private string testName = "iOS App Test with C#";
         protected IOSDriver<IOSElement> driver = null;
 
@@ -26,7 +27,8 @@ namespace AppiumCsharpFirstTest
             dc.SetCapability("accessKey", accessKey);
             dc.SetCapability("waitForDeviceTimeout", 120000);
             dc.SetCapability(MobileCapabilityType.PlatformName, "iOS");
-            dc.SetCapability("autoDismissAlerts", true);
+            dc.SetCapability(MobileCapabilityType.Udid, "5d844d70f42c4cf78cff3b394a53e0763c2766dd");
+            //dc.SetCapability(MobileCapabilityType.Udid, "89f1985e678311073076680ec6ebb55f23c9680e");
             dc.SetCapability(MobileCapabilityType.App, "http://d242m5chux1g9j.cloudfront.net/EriBank.ipa");
             dc.SetCapability(IOSMobileCapabilityType.BundleId, "com.experitest.ExperiBank");
             driver = new IOSDriver<IOSElement>(new Uri("https://beta.seetest.io:443/wd/hub"), dc);           
