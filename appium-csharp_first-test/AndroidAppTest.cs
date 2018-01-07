@@ -33,7 +33,7 @@ namespace AppiumCsharpFirstTest
             dc.SetCapability("platformName", "Android");
             dc.SetCapability(AndroidMobileCapabilityType.AppPackage, "com.experitest.ExperiBank");
             dc.SetCapability(AndroidMobileCapabilityType.AppActivity, ".LoginActivity");
-            driver = new AndroidDriver<AndroidElement>(new Uri("https://beta.seetest.io:443/wd/hub"), dc);
+            driver = new AndroidDriver<AndroidElement>(new Uri("https://cloud.seetest.io:443/wd/hub"), dc);
         }
 
         [Test()]
