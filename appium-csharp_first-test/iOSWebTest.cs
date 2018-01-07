@@ -27,7 +27,7 @@ namespace AppiumCsharpFirstTest
             dc.SetCapability(MobileCapabilityType.PlatformName, "iOS");
             dc.SetCapability("autoDismissAlerts", true);
             dc.SetCapability(MobileCapabilityType.BrowserName, "safari");
-            driver = new IOSDriver<IOSElement>(new Uri("https://beta.seetest.io:443/wd/hub"), dc);           
+            driver = new IOSDriver<IOSElement>(new Uri("https://cloud.seetest.io:443/wd/hub"), dc);           
         }
 
         [Test()]
